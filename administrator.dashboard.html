@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Almustaphal-amin</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f5f8;
+    color: #263746;
+}
+
+header {
+    background: #075985;
+    color: white;
+    padding: 20px;
+}
+
+header h2 {
+    font-size: 21px;
+}
+
+header p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.container {
+    padding: 25px 5%;
+}
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    color: #075985;
+    margin-bottom: 8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0001;
+    border-left: 5px solid #15966a;
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #555;
+}
+
+.card h2 {
+    color: #075985;
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.menu button {
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #15966a;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background: #075985;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 3px 12px #0001;
+}
+
+.panel h2 {
+    color: #075985;
+    margin-bottom: 12px;
+}
+
+.notice {
+    background: #fff5d9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #765400;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    color: #075985;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>✚ Almustaphal-amin</h2>
+    <p>Nursing Home Care | Administration Panel</p>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to your website management panel.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Appointments</h3>
+            <h2>0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Registered Patients</h3>
+            <h2>0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Healthcare Staff</h3>
+            <h2>0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Pending Requests</h3>
+            <h2>0</h2>
+        </div>
+
+    </div>
+
+    <div class="panel">
+        <h2>Management Menu</h2>
+
+        <div class="menu">
+
+            <button onclick="showMessage('Appointment Management')">
+                📅 Appointments
+            </button>
+
+            <button onclick="showMessage('Patient Management')">
+                🧑 Patients
+            </button>
+
+            <button onclick="showMessage('Staff Management')">
+                👨‍⚕️ Staff Management
+            </button>
+
+            <button onclick="showMessage('Messages')">
+                ✉ Messages
+            </button>
+
+            <button onclick="showMessage('Website Settings')">
+                ⚙ Settings
+            </button>
+
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2 id="panelTitle">Dashboard Information</h2>
+        <p id="panelText">
+            Select any management menu above to view its section.
+        </p>
+
+        <div class="notice">
+            This is currently a demonstration dashboard.
+            It does not yet connect to a database or receive
+            real patient information.
+        </div>
+    </div>
+
+    <a href="index.html" class="back">
+        ← Back to Main Website
+    </a>
+
+</div>
+
+<footer>
+    <p>© 2026 Almustaphal-amin Nursing Home Care</p>
+    <p>Compassionate Care, Healthier Living.</p>
+</footer>
+
+<script>
+function showMessage(section) {
+    document.getElementById("panelTitle").textContent = section;
+
+    document.getElementById("panelText").textContent =
+        section + " will be connected to the secure management system in the next development stage.";
+}
+</script>
+
+</body>
+</html>

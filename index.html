@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Almustaphal-amin Nursing Home Care provides compassionate home nursing and healthcare support in Kano, Nigeria.">
+<title>Almustaphal-amin Nursing Home Care</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #075985;
+    --green: #15966a;
+    --light: #f0fdfa;
+    --dark: #123047;
+}
+
+body {
+    background: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background: var(--green);
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.logo h2 {
+    color: var(--blue);
+    font-size: 18px;
+}
+
+.logo p {
+    font-size: 11px;
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.hero {
+    background: linear-gradient(120deg, #075985, #15966a);
+    color: white;
+    padding: 75px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1 1 300px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #ffffff55;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: var(--blue);
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+}
+
+.btn-green {
+    background: var(--green);
+    color: white;
+}
+
+section {
+    padding: 65px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+}
+
+.about {
+    background: var(--light);
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+.services-grid,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.service-card,
+.team-card {
+    padding: 25px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 4px 18px #00000012;
+    text-align: center;
+    border-bottom: 4px solid var(--green);
+}
+
+.service-card .symbol {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.service-card h3,
+.team-card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: #666;
+}
+
+.why {
+    background: var(--light);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.why-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.appointment {
+    background: #eaf7f5;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0001;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 9px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--green);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px;
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 30px 7%;
+    text-align: center;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px #0003;
+    z-index: 200;
+}
+
+@media(max-width: 700px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">✚</div>
+        <div>
+            <h2>Almustaphal-amin</h2>
+            <p>NURSING HOME CARE</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Compassionate Care, Healthier Living.</h1>
+
+        <p>
+            Welcome to Almustaphal-amin Nursing Home Care.
+            We are committed to providing compassionate,
+            professional and patient-centred healthcare support.
+        </p>
+
+        <a href="#appointment" class="btn">Book Appointment</a>
+        <a href="#services" class="btn btn-green">Our Services</a>
+    </div>
+
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900"
+        alt="Healthcare professional">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-title">
+        <h2>About Us</h2>
+        <p>Who We Are</p>
+    </div>
+
+    <p>
+        Almustaphal-amin Nursing Home Care is a healthcare
+        service initiative based in Kano State, Nigeria.
+        Our goal is to support individuals and families
+        through compassionate nursing care, health education
+        and responsible healthcare services.
+        We value dignity, respect, safety and quality care.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Healthcare support you can trust</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="symbol">🏠</div>
+            <h3>Home Nursing Care</h3>
+            <p>Professional nursing support at home by qualified personnel.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">👴</div>
+            <h3>Elderly Care</h3>
+            <p>Respectful care and support for older adults.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">🩹</div>
+            <h3>Wound Care</h3>
+            <p>Appropriate wound assessment and dressing by qualified staff.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">💊</div>
+            <h3>Medication Support</h3>
+            <p>Medication assistance according to authorized prescriptions.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">🩺</div>
+            <h3>Health Monitoring</h3>
+            <p>Monitoring of blood pressure, temperature and other vital signs.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">👶</div>
+            <h3>Maternal and Child Care</h3>
+            <p>Appropriate maternal and child health support.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">📚</div>
+            <h3>Health Education</h3>
+            <p>Health awareness and preventive health education.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">🚑</div>
+            <h3>First Aid</h3>
+            <p>Basic first aid support and referral for emergencies.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="symbol">👨‍👩‍👧</div>
+            <h3>Family Health Support</h3>
+            <p>Healthcare guidance and support for families.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+    <div class="section-title">
+        <h2>Why Choose Us?</h2>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>❤️ Compassion</h3>
+            <p>We respect every patient and treat everyone with dignity.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🛡️ Patient Safety</h3>
+            <p>We value safe and responsible healthcare practices.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>👩‍⚕️ Professionalism</h3>
+            <p>Care should be delivered by appropriately qualified personnel.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>🤝 Trust</h3>
+            <p>We believe in honesty, respect and clear communication.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+    <div class="section-title">
+        <h2>Our Team</h2>
+        <p>Committed to compassionate healthcare</p>
+    </div>
+
+    <div class="team-grid">
+        <div class="team-card">
+            <div class="symbol">👨‍⚕️</div>
+            <h3>Nursing Team</h3>
+            <p>Qualified nursing professionals.</p>
+        </div>
+
+        <div class="team-card">
+            <div class="symbol">👩‍⚕️</div>
+            <h3>Care Support Team</h3>
+            <p>Responsible healthcare support personnel.</p>
+        </div>
+    </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="appointment" id="appointment">
+    <div class="section-title">
+        <h2>Book An Appointment</h2>
+        <p>Send your appointment request through WhatsApp</p>
+    </div>
+
+    <form id="bookingForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+        <label>Select Service</label>
+        <select id="service" required>
+            <option value="">Choose a service</option>
+            <option>Home Nursing Care</option>
+            <option>Elderly Care</option>
+            <option>Wound Care</option>
+            <option>Medication Support</option>
+            <option>Health Monitoring</option>
+            <option>Maternal and Child Care</option>
+            <option>Health Education</option>
+            <option>First Aid</option>
+            <option>Family Health Support</option>
+        </select>
+
+        <label>Preferred Date</label>
+        <input type="date" id="date" required>
+
+        <label>Additional Message</label>
+        <textarea id="message" rows="4"
+        placeholder="Briefly describe your appointment request. Do not include sensitive medical details."></textarea>
+
+        <button type="submit">Send Appointment Request</button>
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We are ready to hear from you</p>
+    </div>
+
+    <p><strong>Business:</strong> Almustaphal-amin Nursing Home Care</p>
+    <p><strong>Location:</strong> Kano State, Nigeria</p>
+    <p><strong>Phone:</strong> 08105799410</p>
+    <p><strong>Email:</strong> almustaphalamin778@gmail.com</p>
+
+    <a class="btn btn-green"
+    href="https://wa.me/2348105799410">
+        Chat With Us on WhatsApp
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Almustaphal-amin Nursing Home Care</h3>
+    <p>Compassionate Care, Healthier Living.</p>
+    <p>© <span id="year"></span> All Rights Reserved.</p>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp"
+href="https://wa.me/2348105799410"
+target="_blank" rel="noopener">
+    WhatsApp
+</a>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "2348105799410";
+
+    const text =
+    "NEW APPOINTMENT REQUEST\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Service: " + service + "\n" +
+    "Preferred Date: " + date + "\n" +
+    "Message: " + message;
+
+    const url =
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
